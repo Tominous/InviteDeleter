@@ -18,14 +18,14 @@ function loadCollections () {
 }
 
 
-//module.exports = db
+module.exports = db
 
-/*const S = require('sequelize')
+const S = require('sequelize')
 
 const sequelize = new S('database', 'user', 'password', {
     host: 'localhost',
     dialect: 'sqlite',
-    logging: false,
+    logging: true,
     operatorsAliases: false,
     // SQLite only
     storage: 'database.sqlite',
@@ -52,7 +52,7 @@ const Users = sequelize.define('users', {
   }
 })
 
-Users.sync()*/
+Users.sync()
 
 async function getUser(user) {
   const data = cache.get(user) || db.users.findOne({id: user})
