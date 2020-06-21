@@ -5,7 +5,7 @@ module.exports = async (client) => {
   console.log(`Discord.JS version: ${client.dversion}`)
   console.log('===========================')
 
-  //client.user.setPresence({ game: { name: `${client.config.prefix}help`, type: 'WATCHING' }})
+  client.user.setPresence({ game: { name: `${client.config.prefix}help`, type: 'WATCHING' }})
   client.user.setPresence({ game: { name: `${client.config.prefix}help | https://bit.ly/InviteDeleter`, type: 'WATCHING' }, status: 'online'})
 
   const specials = ['BOT_LOG', 'ERROR_LOG', 'COMMAND_LOG', 'CHANGELOG']
